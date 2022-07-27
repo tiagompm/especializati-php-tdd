@@ -33,9 +33,6 @@ class PaymentUnitTest extends TestCase
 
         //assert
         $this->assertTrue($response);
-
-
-
     }
 
 
