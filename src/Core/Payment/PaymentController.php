@@ -5,10 +5,16 @@ namespace Core\Payment;
 
 class PaymentController
 {
-    private $repository;
+    private $payment;
     
-    public function __construct(PaymentInterface $repository)
+    public function __construct(PaymentInterface $payment)
     {
-        $this->repository = $repository;    
+        $this->payment = $payment;    
     }
+
+    public function execute()
+    {
+        return $this->payment->makePayment([]);
+    }
+
 }
